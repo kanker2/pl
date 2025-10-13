@@ -1,0 +1,1 @@
+This are the exercises for the Logic Programming subject of the Artificial Inteligence Master at Universidad Politécnica de Madrid
