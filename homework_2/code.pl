@@ -44,9 +44,6 @@ add_to_list([XL|L],X,[XSL|SL]) :-
 %  that are even in list L
 
 evens_list([], []).
-evens_list([XL|L], []) :-
-    odd(XL),
-    evens_list(L, []).
 evens_list([E|L], [E|Ps]) :-
     even(E),
     evens_list(L,Ps).
