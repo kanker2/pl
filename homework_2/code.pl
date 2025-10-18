@@ -53,3 +53,17 @@ evens_list([E|L], [E|Ps]) :-
 evens_list([OL|L], Ps):-
     odd(OL),
     evens_list(L,Ps).
+
+% Exercise 3:
+% Write a pure predicate extract_element(I,L,E,NL)
+%  which holds if I is an index (a natural in Peano notation),
+%  L a list, E the element of L that is in the position
+%  indicated by the index I, and NL is the list L but
+%  without that element E. The first element of list L
+%  is position 0. For example, given index s(s(0)) and
+%  list [a,b,c,d,e] the element E is c and the list NL
+%  is [a,b,d,e].
+
+extract_element(0,[E|LNE],E,LNE).
+extract_element(s(I),[X|L],E,[X|NL]) :-
+    extract_element(I,L,E,NL).
